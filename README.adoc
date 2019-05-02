@@ -1,0 +1,7 @@
+# Karaf feature Jooq (OpenSource)
+
+Externsion to karaf which adds Jooq opensourcce bundles to karaf features.
+
+## Features:
+
+- jooq 3.11.11
