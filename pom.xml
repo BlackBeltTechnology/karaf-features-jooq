@@ -5,7 +5,7 @@
 
     <groupId>hu.blackbelt.karaf.features</groupId>
     <artifactId>jooq</artifactId>
-    <version>3.11.12-SNAPSHOT</version>
+    <version>3.13.1_1-SNAPSHOT</version>
     <name>JOOQ karaf feature project</name>
     <packaging>pom</packaging>
 
