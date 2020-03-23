@@ -4,4 +4,4 @@ Externsion to karaf which adds Jooq opensourcce bundles to karaf features.
 
 ## Features:
 
-- jooq 3.11.11
+- jooq 3.13.1
