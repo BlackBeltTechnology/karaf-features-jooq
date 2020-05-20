@@ -22,6 +22,7 @@ build:
       
     - wercker/maven:
       goals: versions:set
+      profiles: professional
       maven_opts: -Dtycho.mode=maven -DnewVersion=${VERSION_NUMBER}
       settings: .maven.xml
       cache_repo: true

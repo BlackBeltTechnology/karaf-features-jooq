@@ -5,9 +5,9 @@
 
     <parent>
         <groupId>hu.blackbelt.karaf.features</groupId>
-        <artifactId>jooq-professional</artifactId>
-        <version>3.13.2_1</version>
-        <relativePath>../</relativePath>
+        <artifactId>jooq</artifactId>
+        <version>3.13.2-SNAPSHOT</version>
+        <relativePath>../../</relativePath>
     </parent>
 
     <groupId>org.jooq.pro-java-8</groupId>
@@ -26,7 +26,7 @@
                 <executions>
                     <execution>
                         <id>download-glassfish</id>
-                        <phase>validate</phase>
+                        <phase>generate-resources</phase>
                         <goals>
                             <goal>download-single</goal>
                         </goals>
