@@ -29,6 +29,17 @@
             <password>${env.JUDONG_NEXUS_PASSWORD}</password>
         </server>
         
+        <server>
+            <id>jooq-professional</id>
+            <username>${env.JOOQ_USERNAME}</username>
+            <password>${env.JOOQ_PASSWORD}</password>
+            <configuration>
+                <authenticationInfo>
+                    <userName>${env.JOOQ_USERNAME}</userName>
+                    <password>${env.JOOQ_PASSWORD}</password>
+                </authenticationInfo>
+            </configuration>
+        </server>
     </servers>
     
     <mirrors>

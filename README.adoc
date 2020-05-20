@@ -4,4 +4,28 @@ Externsion to karaf which adds Jooq opensourcce bundles to karaf features.
 
 ## Features:
 
-- jooq 3.13.1
+- jooq 3.13.2
+
+
+The jooq open source edition only supports limited features and open source databases. TThis feature plugin can install artifactos to your repository, you have to set the credentials in your settings.xml:
+
+[source,xml]
+----
+        <server>  
+            <id>jooq-professional</id>
+            <username>your jooq user</username>
+            <password>your jooq password</password>
+            <configuration>  
+                <authenticationInfo>
+                    <userName>your jooq user</userName>
+                    <password>your jooq password</password>
+                </authenticationInfo>
+            </configuration>  
+        </server> 
+----
+
+After that you can activate profile:
+[source,xml]
+----
+mvn deploy -P professional
+----

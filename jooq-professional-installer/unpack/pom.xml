@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>hu.blackbelt.karaf.features</groupId>
+        <artifactId>jooq-professional</artifactId>
+        <version>3.13.2_1</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <groupId>org.jooq.pro-java-8</groupId>
+    <artifactId>jooq-unpack</artifactId>
+    <packaging>pom</packaging>
+    <name>JOOQ Professional Unpacker</name>
+
+
+    <build>
+
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>wagon-maven-plugin</artifactId>
+                <version>1.0</version>
+                <executions>
+                    <execution>
+                        <id>download-glassfish</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>download-single</goal>
+                        </goals>
+                        <configuration>
+                            <serverId>jooq-professional</serverId>
+                            <url>https://www.jooq.org</url>
+                            <fromFile>/download/pro/jOOQ-${jooq-version}.zip?type=java-8</fromFile>
+                            <toFile>${project.build.directory}/jooq-pro/jooq-pro.zip</toFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            
+            <plugin>
+               <artifactId>maven-antrun-plugin</artifactId>
+               <version>1.8</version>
+               <executions>
+                  <execution>
+                     <phase>generate-resources</phase>
+                     <configuration>
+                        <tasks>
+                           <echo message="Unzipping file" />
+                           <unzip src="${project.build.directory}/jooq-pro/jooq-pro.zip" dest="${project.build.directory}/jooq-pro" />
+                        </tasks>
+                     </configuration>
+                     <goals>
+                        <goal>run</goal>
+                     </goals>
+                  </execution>
+               </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

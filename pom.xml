@@ -11,6 +11,7 @@
 
     <properties>
         <karaf-version>4.2.5</karaf-version>
+        <jooq-version>3.13.2</jooq-version>
     </properties>
 
     <description>JOOQ Karaf features</description>
@@ -88,6 +89,14 @@
     
     <profiles>
         <profile>
+            <id>professional</id>
+            <modules>
+                <module>jooq-professional-installer</module>
+                <module>features-professional</module>
+                <module>kar-professional</module>
+            </modules>
+        </profile>
+        <profile>
             <activation>
                 <property>
                     <name>github_release</name>
@@ -99,7 +108,7 @@
                 <module>kar</module>
             </modules>
         </profile>
-        
+
         <profile>
             <id>release-github</id>
             <build>

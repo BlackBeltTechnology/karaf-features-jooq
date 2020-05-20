@@ -4,9 +4,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.5.0 http://karaf.apache.org/xmlns/features/v1.5.0">
 
-    <feature name="jooq" version="${jooq-version}" description="JOOQ Bundles" install="false">
+    <!-- This is not released publicly default. To achive this feature it have to be installed to your private maven repository.
+    -->
+    <feature name="jooq-professional" version="${jooq-version}" description="JOOQ Bundles" install="false">
         <bundle>mvn:org.reactivestreams/reactive-streams/1.0.3</bundle>
-        <bundle>mvn:org.jooq/jooq/${jooq-version}</bundle>
+        <bundle>mvn:org.jooq.pro-java-8/jooq/${jooq-version}</bundle>
     </feature>
 
 </features>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>hu.blackbelt.karaf.features</groupId>
+        <artifactId>jooq</artifactId>
+        <version>3.13.2_1</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <groupId>org.jooq.pro-java-8</groupId>
+    <artifactId>jooq-professional-installer</artifactId>
+    <packaging>pom</packaging>
+    <name>JOOQ Professional artifact installer</name>
+
+    <modules>
+        <module>unpack</module>
+        <module>jooq</module>
+    </modules>
+</project>
