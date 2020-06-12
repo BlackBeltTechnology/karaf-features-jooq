@@ -4,9 +4,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.5.0 http://karaf.apache.org/xmlns/features/v1.5.0">
 
-    <feature name="jooq" version="${jooq-version}" description="JOOQ Bundles" install="false">
+    <feature name="jooq" version="${jooq-community-version}" description="JOOQ Bundles" install="false">
         <bundle>mvn:org.reactivestreams/reactive-streams/1.0.3</bundle>
-        <bundle>mvn:org.jooq/jooq/${jooq-version}</bundle>
+        <bundle>mvn:org.jooq/jooq/${jooq-community-version}</bundle>
     </feature>
 
 </features>

@@ -5,13 +5,16 @@
 
     <groupId>hu.blackbelt.karaf.features</groupId>
     <artifactId>jooq</artifactId>
-    <version>3.13.2-SNAPSHOT</version>
+    <version>3.14.0-SNAPSHOT</version>
     <name>JOOQ karaf feature project</name>
     <packaging>pom</packaging>
 
     <properties>
         <karaf-version>4.2.5</karaf-version>
-        <jooq-version>3.13.2</jooq-version>
+        <jooq-version>3.14.0-SNAPSHOT</jooq-version>
+        <jooq-snapshot-date>-20200610192149</jooq-snapshot-date>
+        <jooq-community-version>3.13.2</jooq-community-version>
+
     </properties>
 
     <description>JOOQ Karaf features</description>
@@ -105,6 +108,7 @@
             </modules>
         </profile>
         <profile>
+            <id>modules</id>
             <activation>
                 <property>
                     <name>github_release</name>
