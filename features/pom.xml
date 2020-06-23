@@ -72,7 +72,7 @@
                                 <feature>shell-compat</feature>
                             </framework>
                             <features>
-                                <feature>tinybundles</feature>
+                                <feature>jooq</feature>
                             </features>
                         </configuration>
                     </execution>
