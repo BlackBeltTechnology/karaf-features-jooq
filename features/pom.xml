@@ -12,6 +12,7 @@
     <packaging>feature</packaging>
     <name>JOOQ karaf features</name>
 
+
     <properties>
         <sign.skip>true</sign.skip>
     </properties>
@@ -24,7 +25,7 @@
                 <targetPath>${project.build.directory}/feature</targetPath>
             </resource>
         </resources>
-            
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -39,6 +40,12 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+
+            <plugin>
                 <groupId>org.apache.karaf.tooling</groupId>
                 <artifactId>karaf-maven-plugin</artifactId>
                 <extensions>true</extensions>
@@ -46,12 +53,6 @@
                     <enableGeneration>true</enableGeneration>
                     <aggregateFeatures>true</aggregateFeatures>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>attach-artifacts</id>
@@ -71,9 +72,9 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
-
     <profiles>
         <profile>
             <id>verify-feature</id>
@@ -112,13 +113,12 @@
                                         <feature>shell-compat</feature>
                                     </framework>
                                     <features>
-                                        <feature>tinybundles</feature>
+                                        <feature>tinybundles</feature> <!--im not sure what else goes here-->
                                     </features>
                                 </configuration>
                             </execution>
                         </executions>
                     </plugin>
-
                 </plugins>
             </build>
             <dependencies>
