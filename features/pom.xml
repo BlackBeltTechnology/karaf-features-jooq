@@ -6,7 +6,6 @@
         <groupId>hu.blackbelt.karaf.features</groupId>
         <artifactId>jooq</artifactId>
         <version>${revision}</version>
-        <relativePath>../</relativePath>
     </parent>
     <artifactId>jooq-features</artifactId>
     <packaging>feature</packaging>

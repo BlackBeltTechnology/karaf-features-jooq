@@ -5,8 +5,8 @@
     <parent>
         <groupId>hu.blackbelt.karaf.features</groupId>
         <artifactId>jooq</artifactId>
-        <version>3.13.2-SNAPSHOT</version>
-        <relativePath>../</relativePath>
+        <version>${revision}</version>
+
     </parent>
     <artifactId>jooq-features-professional</artifactId>
     <packaging>feature</packaging>

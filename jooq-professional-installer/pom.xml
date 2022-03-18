@@ -6,8 +6,7 @@
     <parent>
         <groupId>hu.blackbelt.karaf.features</groupId>
         <artifactId>jooq</artifactId>
-        <version>3.13.2-SNAPSHOT</version>
-        <relativePath>../</relativePath>
+        <version>${revision}</version>
     </parent>
 
     <groupId>org.jooq.pro-java-8</groupId>
