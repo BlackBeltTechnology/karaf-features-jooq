@@ -45,13 +45,9 @@
             </plugin>
 
             <plugin>
-                <groupId>org.apache.karaf.tooling</groupId>
-                <artifactId>karaf-maven-plugin</artifactId>
-                <extensions>true</extensions>
-                <configuration>
-                    <enableGeneration>true</enableGeneration>
-                    <aggregateFeatures>true</aggregateFeatures>
-                </configuration>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>attach-artifacts</id>
@@ -112,7 +108,7 @@
                                         <feature>shell-compat</feature>
                                     </framework>
                                     <features>
-                                        <feature>tinybundles</feature> <!--im not sure what else goes here-->
+                                        <feature>tinybundles</feature>
                                     </features>
                                 </configuration>
                             </execution>
